@@ -1,0 +1,14 @@
+.containerDetail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* width: 80%; */
+}
+
+.containerDetailInfo{
+    background-color: #28a745;
+    border-radius: 10px;
+    margin: 20px;
+}
