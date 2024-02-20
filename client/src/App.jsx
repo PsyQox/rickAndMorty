@@ -1,5 +1,3 @@
-//Si la llamas index importas solamente la carpeta
-// import axios from "axios";
 import React from 'react';
 import {useState, useEffect} from "react";
 import { Routes,Route, useLocation, useNavigate } from 'react-router-dom';
@@ -12,14 +10,14 @@ import Error from './view/Error';
 import Landing from './view/Landing/Landing';
 import Favorites from './components/Favorites/Favorites'
 import axios from 'axios'
+import Home from './view/Home/Home';
 
 function App() {
 
    const [characters, setCharacters] = useState([]);
-   const location = useLocation();
-   const [access,setAccess] = useState(false)
-   const EMAIL = "luisrodrizza@gmail.com"
-   const PASSWORD = "qwe123";
+   const location = useLocation(); //Hook react-roter-dom para saber la ubicación actual del lugar
+   const [access,setAccess] = useState(true)
+   
    const navigate = useNavigate();
 
    // function login(userData) {
@@ -107,12 +105,12 @@ function App() {
       setCharacters(chara);
    }
  
-   //  console.log(characters);
     return (
       <div className='App'>
          {location.pathname !== "/" && <Nav onSearch={onSearch} logOut={logOut}/>}
          <Routes>
             <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/>
+            {/* <Route path='/home' element={<Home />}/> */}
             <Route path='/about' element={<About/>}/>
             <Route path='/detail/:id' element={<Detail/>}/>
             <Route path="/" element={<Landing login={login}/>}/>
