@@ -7,7 +7,6 @@ const Nav = (props)=>{
     return(
         <div>
             <h1 className={style.title}>Rick and Morty</h1>
-            <SearchBar onSearch={props.onSearch}/>
             <Link to='/about'>
                 <button className={style.buttonNav}>About</button>
             </Link>
@@ -17,7 +16,7 @@ const Nav = (props)=>{
             <Link to="/favorites">
                 <button className={style.buttonNav}>Favorites</button>
             </Link>
-            <button className={style.buttonNav} onClick={()=>props.logOut()}>Log Out</button>
+            {/* <SearchBar onSearch={props.onSearch}/> */}
         </div>
     ) 
 }

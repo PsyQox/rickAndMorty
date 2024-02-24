@@ -1,12 +1,16 @@
 import React from "react";
-import Form from "../../components/Form/Form";
 import style from "./Landing.module.css"
+import { Link } from "react-router-dom"; 
 
-const Landing  = ({login}) =>{
+const Landing  = () =>{
 
     return (
         <div className={style.container}>
-            <Form login={login}/>
+            <div className={style.containerButton}>
+                <Link to="/home">
+                    <button className={style.button}>Get into</button>
+                </Link>
+            </div>
         </div>
     )
 }

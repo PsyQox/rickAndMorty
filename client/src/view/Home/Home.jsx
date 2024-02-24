@@ -1,15 +1,14 @@
 import React from "react";
-import Card from "../../components/Cards/Card/Card";
+import Cards from "../../components/Cards/Cards";
+import SearchBar from "../../components/Nav/SearhBar/SearchBar";
 
-// const Home = () =>{
+const Home = ({characters, onClose, onSearch}) =>{
 
-
-// }
-
-class Home extends React.Component{
-    render(){
-        return ( <div>hola</div> )
-    }
+    return (<>
+    {/* onSearch={props.onSearch}/> */}
+        <SearchBar onSearch={onSearch}/>
+        <Cards characters={characters} onClose={onClose}/>
+    </>)
 }
 
 export default Home

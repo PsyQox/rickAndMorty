@@ -52,26 +52,19 @@ export default function Card({key,id,name,origin,status,species,onClose,gender,i
                <h2 className={style.h2Card} > {name}</h2>
                <div className={style.containerButton}>
                   {  isFav ? (
-                     <button onClick={() => handleFavorite()}>❤️</button>
+                     <button className={style.buttonFav2} onClick={() => handleFavorite()}>❤️</button>
                   ) : (
-                     <button onClick={() => handleFavorite()}>🤍</button>
+                     <button className={style.buttonFav} onClick={() => handleFavorite()}>🤍</button>
                   )}
-                  { locate.pathname === '/favorites' ? null: <button className={style.buttonClose} onClick={()=>{
-                     onClose(id) 
-                     removeFavorite(id)}} >X</button> }
                   <Link to={`/detail/${id}`}>
                      <button className={style.button}>Detalle</button>
                   </Link>
+                  { locate.pathname === '/favorites' ? null: <button className={style.buttonClose} onClick={()=>{
+                     onClose(id) 
+                     removeFavorite(id)}} >X</button> }
                </div>
          </div>
       </div>
    );
 }
 
-
-
-{/* 
-         <h2 className={style.h2Card} data-text="Especie: "> {species}</h2> */}
-         {/* <h2 className={style.h2Card} data-text="Genero: "> {gender}</h2>
-         <h2 className={style.h2Card} data-text="Estado: "> {status}</h2>
-         <h2 className={style.h2Card} data-text="Origen: "> {origin}</h2> */}

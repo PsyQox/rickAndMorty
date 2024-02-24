@@ -20,35 +20,9 @@ function App() {
    
    const navigate = useNavigate();
 
-   // function login(userData) {
-   //    if (userData.password === PASSWORD && userData.email === EMAIL) {
-   //       setAccess(true);
-   //       navigate('/home'); 
-   //    }
-   // }
-
-   async function login(userData){
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      try {
-         const { data } = await axios(URL + `?email=${email}&password=${password}`)
-         const { access } = data;
-         setAccess(access);
-         access && navigate('/home');
-      } catch (error) {
-         alert("El correo o la contraseña no esta correcta")
-      }
-      
-      
-   }
-
-   function logOut(){
-      setAccess(false);
-   }
-
    useEffect(() => {
-      !access && navigate('/');
-   }, [access]);
+      
+   }, []);
 
 
    const onSearch = async (id) =>{
@@ -79,41 +53,28 @@ function App() {
          window.alert("No se puede agregar repetidos")
       }
       
-      //Esta destructurado porque es un objeto, so no seria respuesta.data
-      // axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-      //    if (data.name) {
-      //       setCharacters((oldChars) => [...oldChars, data]);
-      //    } else {
-      //       window.alert('¡No hay personajes con este ID!');
-      //    }
-      // });    
    }
 
    const onClose = (id)=>{
       let chara = []
-      // let idN = parseInt(id)
-      // setCharacters([]);
-      //Se puede hacer con un filter
-      // console.log("entre", id);
       characters.map(char =>{
          if (char.id !== id) {
              return chara.push(char)
          }
          return chara
       })
-      // let chara = characters.filter(char => char.id !== id)
       setCharacters(chara);
    }
  
     return (
       <div className='App'>
-         {location.pathname !== "/" && <Nav onSearch={onSearch} logOut={logOut}/>}
+         {location.pathname !== "/" && <Nav />}
          <Routes>
-            <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/>
-            {/* <Route path='/home' element={<Home />}/> */}
+            {/* <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/> */}
+            <Route path='/home' element={<Home  characters={characters} onClose={onClose} onSearch={onSearch}/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/detail/:id' element={<Detail/>}/>
-            <Route path="/" element={<Landing login={login}/>}/>
+            <Route path="/" element={<Landing />}/>
             <Route path='/favorites' element={<Favorites />}/>
             <Route path='*' element={<Error/>}/>
          </Routes>
