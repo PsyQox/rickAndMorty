@@ -57,6 +57,7 @@
     background-color: #28a745;
     color: white;
     border: none;
+    cursor: pointer;
 }
 .button:hover{
     background-color: rgba(49, 161, 83, 0.6);
@@ -67,6 +68,7 @@
     border-radius: 10px;
     margin: 7px;
     width: 70px;
+    cursor: pointer;
     color: white;
 }
 
@@ -85,6 +87,7 @@
     background-color: #dc3545;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .buttonFav2{
@@ -93,4 +96,5 @@
     background-color: #ffffffff;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }

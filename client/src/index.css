@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://cdn.pixabay.com/photo/2020/06/13/17/50/milky-way-5295155_1280.jpg");
+  background-image: url("./img/bg-rickandmorty.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
