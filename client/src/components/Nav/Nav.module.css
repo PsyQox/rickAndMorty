@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Shlop';
-    src: url("../../fonts/shlop\ rg.ttf");
+    font-family: 'Schwifty';
+    src: url("../../fonts/get_schwifty.ttf");
 }
 .buttonNav{
     height: 35px;
@@ -16,8 +16,24 @@
 }
 
 .title{
-    font-family: 'Shlop';
-    color: rgb(26, 99, 16);
-    font-size: 50px;
-    background-color: rgba(255, 255, 255, 0.6);
+    font-family: 'Schwifty';
+    color: #69C8ECFF;
+    font-size: 75px;
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    letter-spacing: 2px; /* Ajustar según sea necesario */
+    font-weight: bold; /* O ajustar al valor adecuado */
+    text-align: center; /* Alineación del texto */
+    -webkit-text-stroke: 1px black; 
+    text-shadow: 
+        -2px -2px 0 #FAFD7CFF,
+        2px -2px 0 #FAFD7CFF,
+        -2px 2px 0 #FAFD7CFF,
+        2px 2px 0 #FAFD7CFF;
+    /* line-height: 100px; */
+}
+
+@media only screen and (max-width: 523px){
+    .title{
+        line-height: 100px;
+    }
 }

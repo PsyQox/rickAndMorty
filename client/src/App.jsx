@@ -1,8 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from "react";
-import { Routes,Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes,Route, useLocation } from 'react-router-dom';
 import './App.css';
-import Cards from './components/Cards/Cards';
 import Nav from "./components/Nav/Nav";
 import About from './view/About/About';
 import Detail from './view/Detail/Detail';
@@ -16,9 +15,6 @@ function App() {
 
    const [characters, setCharacters] = useState([]);
    const location = useLocation(); //Hook react-roter-dom para saber la ubicación actual del lugar
-   const [access,setAccess] = useState(true)
-   
-   const navigate = useNavigate();
 
    useEffect(() => {
       
@@ -70,7 +66,6 @@ function App() {
       <div className='App'>
          {location.pathname !== "/" && <Nav />}
          <Routes>
-            {/* <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}/> */}
             <Route path='/home' element={<Home  characters={characters} onClose={onClose} onSearch={onSearch}/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/detail/:id' element={<Detail/>}/>
