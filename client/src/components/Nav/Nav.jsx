@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from 'react-router-dom'
 import style from './Nav.module.css'
 
-const Nav = (props)=>{
+const Nav = ()=>{
     return(
         <div>
             <h1 className={style.title}>Rick and Morty</h1>
@@ -15,7 +15,6 @@ const Nav = (props)=>{
             <Link to="/favorites">
                 <button className={style.buttonNav}>Favorites</button>
             </Link>
-            {/* <SearchBar onSearch={props.onSearch}/> */}
         </div>
     ) 
 }

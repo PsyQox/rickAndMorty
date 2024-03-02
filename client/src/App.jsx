@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect} from "react";
+import { useState } from "react";
 import { Routes,Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Nav from "./components/Nav/Nav";
@@ -8,17 +8,13 @@ import Detail from './view/Detail/Detail';
 import Error from './view/Error';
 import Landing from './view/Landing/Landing';
 import Favorites from './components/Favorites/Favorites'
-import axios from 'axios'
 import Home from './view/Home/Home';
 
 function App() {
 
    const [characters, setCharacters] = useState([]);
-   const location = useLocation(); //Hook react-roter-dom para saber la ubicación actual del lugar
+   const location = useLocation(); 
 
-   useEffect(() => {
-      
-   }, []);
 
 
    const onSearch = async (id) =>{
@@ -46,7 +42,7 @@ function App() {
             
          
       }else{
-         window.alert("No se puede agregar repetidos")
+         alert("Cannot add characters repeats")
       }
       
    }

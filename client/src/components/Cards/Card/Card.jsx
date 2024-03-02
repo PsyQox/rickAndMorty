@@ -4,7 +4,7 @@ import {Link, useLocation} from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux";
 import { addFav,removeFav } from "../../../redux/actions";
 
-export default function Card({key,id,name,origin,status,species,onClose,gender,image}) {
+export default function Card({id,name,origin,status,species,onClose,gender,image}) {
    
    const [isFav, setIsFav] = useState(false);
    const myFavorites = useSelector(state=> state.myFavorites)
