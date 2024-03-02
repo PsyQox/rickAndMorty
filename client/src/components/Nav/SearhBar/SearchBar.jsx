@@ -38,7 +38,7 @@ export default function SearchBar(props) {
       <>
       <div className={style.divSearch}>
          <input className={style.inputSearch} type='search' placeholder="Search or add character, please write a number... (1 - 826)" onChange={onHandleChange} value={id} />
-         <button className={style.buttonSearch} onClick={()=>onHandleSubmit()}>Agregar</button>
+         <button className={style.buttonSearch} onClick={()=>onHandleSubmit()}>Add</button>
          <button className={style.buttonSearch} onClick={()=>props.onSearch(Math.floor(Math.random()*826)+1)}>Random</button>
          <br />
 

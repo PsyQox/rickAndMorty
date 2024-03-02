@@ -57,7 +57,7 @@ export default function Card({id,name,origin,status,species,onClose,gender,image
                      <button className={style.buttonFav} onClick={() => handleFavorite()}>🤍</button>
                   )}
                   <Link to={`/detail/${id}`}>
-                     <button className={style.button}>Detalle</button>
+                     <button className={style.button}>Detail</button>
                   </Link>
                   { locate.pathname === '/favorites' ? null: <button className={style.buttonClose} onClick={()=>{
                      onClose(id) 

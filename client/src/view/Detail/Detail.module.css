@@ -1,10 +1,16 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .containerDetail{
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.6);
-    /* width: 80%; */
+    width: 80%;
 }
 
 .containerDetailInfo{
@@ -12,3 +18,4 @@
     border-radius: 10px;
     margin: 20px;
 }
+

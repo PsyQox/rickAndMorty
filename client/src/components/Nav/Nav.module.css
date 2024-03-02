@@ -10,9 +10,28 @@
     background-color: #28a745;
     color: white;
     border: none;
+    cursor: pointer;
 }
 .buttonNav:hover{
     background-color: rgba(49, 161, 83, 0.6);
+}
+
+.buttonNavExit{
+    height: 35px;
+    border-radius: 10px;
+    margin: 7px;
+    width: 70px;
+    background-color:#dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.buttonNavExit:hover{
+    background-color: rgba(220, 53, 69, 0.6);
+}
+
+.containerNav{
+    margin-bottom: 1.5rem;
 }
 
 .title{

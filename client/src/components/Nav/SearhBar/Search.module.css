@@ -22,6 +22,7 @@
     /* border: 2px solid;
     border-color: black; */
     border: none;
+    cursor: pointer;
 }
 .buttonSearch:hover{
     background-color: rgba(49, 161, 83, 0.6);

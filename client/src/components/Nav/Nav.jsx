@@ -4,7 +4,7 @@ import style from './Nav.module.css'
 
 const Nav = ()=>{
     return(
-        <div>
+        <div className={style.containerNav}>
             <h1 className={style.title}>Rick and Morty</h1>
             <Link to='/about'>
                 <button className={style.buttonNav}>About</button>
@@ -14,6 +14,9 @@ const Nav = ()=>{
             </Link>
             <Link to="/favorites">
                 <button className={style.buttonNav}>Favorites</button>
+            </Link>
+            <Link to="/">
+                <button className={style.buttonNavExit}>Exit</button>
             </Link>
         </div>
     ) 
