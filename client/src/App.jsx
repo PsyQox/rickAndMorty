@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-import { Routes,Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Nav from "./components/Nav/Nav";
 import About from './view/About/About';
@@ -28,7 +28,6 @@ function App() {
       return exist
    })
       if (!exist) {
-         // fetch(`https://rickandmortyapi.com/api/character/${id}`)
            try {
             const data = await fetch(`http://localhost:3001/rickandmorty/character/${id}`).then(res=>res.json()) 
             if (data.name) {

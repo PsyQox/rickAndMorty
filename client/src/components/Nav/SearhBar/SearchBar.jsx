@@ -3,17 +3,13 @@ import { useState } from "react";
 import style from "./Search.module.css"
 
 export default function SearchBar(props) {
-   //La particulariodad del estado es que puede redenderizar
+
    const [id,setId] = useState("")
    const [errors, setErrors] = useState({})
 
-   // const inputId = (event)=>{
-   //    setId(event.target.value)
-   // }
    const onHandleChange = (event) => {
       setId(event.target.value)
       setErrors(validate(event.target.value))
-      
    }
 
    const validate = (value) => {

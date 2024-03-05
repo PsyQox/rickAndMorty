@@ -8,7 +8,6 @@ const Detail = ()=>{
     const [character, setCharacters] = useState({});
 
     useEffect(()=>{
-    // fetch(`https://rickandmortyapi.com/api/character/${id}`)
     fetch(`http://localhost:3001/rickandmorty/character/${id}`)
          .then(res=>res.json())
          .then((data) => setCharacters(data) )

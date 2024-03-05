@@ -5,7 +5,6 @@ import SearchBar from "../../components/Nav/SearhBar/SearchBar";
 const Home = ({characters, onClose, onSearch}) =>{
 
     return (<>
-    {/* onSearch={props.onSearch}/> */}
         <SearchBar onSearch={onSearch}/>
         <Cards characters={characters} onClose={onClose}/>
     </>)
