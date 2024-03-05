@@ -29,6 +29,10 @@ export default function SearchBar(props) {
    const onHandleSubmit = () => {
       if (!id) {
          alert("Enter a number");
+         return false
+      }else if(Object.keys(errors).length > 0) {
+         alert('Fix the errors you have')
+         return false
       }else{
          props.onSearch(id)
       }
