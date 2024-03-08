@@ -51,7 +51,7 @@ function App() {
       characters.map(char =>{
          if (char.id !== id) {
              return chara.push(char)
-         }
+         } 
          return chara
       })
       setCharacters(chara);
